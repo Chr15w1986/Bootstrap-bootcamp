@@ -186,3 +186,7 @@ footer {
     background: #e84610;
     color: #e67e22;
 }
+
+#footer-details {
+    padding: 20px;
+}
