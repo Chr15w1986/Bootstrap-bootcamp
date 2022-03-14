@@ -67,7 +67,7 @@ function fetchGitHubInformation(event) {
                 );
             } else if(errorResponse.status === 403) {
                 const resetTime = new Date(errorResponse.getResponseHeader('X-RateLimit-Reset')*1000);
-                $("#gh-user-data").html(`<h4>Too many requests, Please wait 45 minutes or until ${resetTime.toLocaleTimeString()}</h4>`);
+                $("#gh-user-data").html(`<h4>Too many requests,<br> Please wait 45 minutes or until ${resetTime.toLocaleTimeString()}</h4>`);
             } else {
                 console.log(errorResponse);
                 $("#gh-user-data").html(
