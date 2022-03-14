@@ -37,6 +37,9 @@ function repoInformationHTML(repos) {
 
 
 function fetchGitHubInformation(event) {
+    $("#gh-user-data").html("");
+    $("#gh-repo-data").html("");
+
     const username = $("#gh-username").val();
     if (!username) {
         $("#gh-user-data").html(`<h3>Please enter a Github username.</h3>`);
@@ -70,3 +73,5 @@ function fetchGitHubInformation(event) {
             }
         });
 }
+
+$(document).ready(fetchGitHubInformation);
